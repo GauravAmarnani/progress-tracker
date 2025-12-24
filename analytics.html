@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Analytics</h1>
+  <button id="themeToggle">Dark Mode</button>
+  <a href="index.html">Tracker</a>
+</header>
+
+<main>
+  <div class="toolbar">
+    <button id="exportCsv">Export CSV</button>
+  </div>
+
+  <div class="card">
+    <h2>Topic-wise Progress</h2>
+    <canvas id="barChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>Time Distribution</h2>
+    <canvas id="pieChart"></canvas>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/theme.js"></script>
+
+</body>
+</html>
