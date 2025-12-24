@@ -6,34 +6,45 @@ function render() {
   studyData.topics.forEach(topic => {
     let topicMinutes = 0;
 
-    let html = `<section class="card">
-      <h2>${topic.name}</h2>`;
+    const card = document.createElement("section");
+    card.className = "card";
+
+    const h2 = document.createElement("h2");
+    h2.textContent = topic.name;
+    card.appendChild(h2);
 
     topic.subtopics.forEach(sub => {
-      html += `<h3>${sub.name}</h3><ul>`;
+      const h3 = document.createElement("h3");
+      h3.textContent = sub.name;
+      card.appendChild(h3);
+
+      const ul = document.createElement("ul");
 
       sub.items.forEach(item => {
         const done = progress[item.id];
         if (done) topicMinutes += item.minutes;
 
-        html += `
-          <li class="item ${done ? "done" : ""}"
-              onclick="toggle('${item.id}')">
-            ${item.name} — ${item.minutes} min
-          </li>`;
+        const li = document.createElement("li");
+        li.className = "item" + (done ? " done" : "");
+        li.textContent = `${item.name} — ${item.minutes} min`;
+
+        li.addEventListener("click", () => {
+          toggleItem(item.id);
+          render();
+        });
+
+        ul.appendChild(li);
       });
 
-      html += `</ul>`;
+      card.appendChild(ul);
     });
 
-    html += `<p><strong>Total Completed:</strong> ${topicMinutes} min</p></section>`;
-    container.innerHTML += html;
-  });
-}
+    const total = document.createElement("p");
+    total.innerHTML = `<strong>Total Completed:</strong> ${topicMinutes} min`;
+    card.appendChild(total);
 
-function toggle(id) {
-  toggleItem(id);
-  render();
+    container.appendChild(card);
+  });
 }
 
 render();
