@@ -1,0 +1,83 @@
+:root {
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #111827;
+  --accent: #2563eb;
+}
+
+.dark {
+  --bg: #0b1220;
+  --card: #111827;
+  --text: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 14px;
+  background: var(--card);
+}
+
+header h1 {
+  flex: 1 1 100%;
+  font-size: 1.4rem;
+}
+
+main {
+  padding: 12px;
+}
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+
+.item {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.item:hover {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.item.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .item {
+    font-size: 0.95rem;
+  }
+}
