@@ -1303,7 +1303,7 @@ const studyData = {
       ]
     },
     {
-      name: "DEVELOPMENT-OPERATIONS",
+      name: "DEV-OPS",
       subtopics: [
         {
           name: "Videos and Implementation",
@@ -1329,8 +1329,8 @@ const studyData = {
             { id: "devops-s", name: "Learn Terraform", minutes: 99 },
             { id: "devops-t", name: "Ansible", minutes: 261 },
             { id: "devops-u", name: "Monitoring and Observability", minutes: 162 },
-            { id: "devops-v", name: "AWS CI/CD Project", minutes:  },
-            { id: "devops-w", name: "Project on Google Cloud", minutes: 72 },
+            { id: "devops-v", name: "AWS CI/CD Project", minutes: 72 },
+            { id: "devops-w", name: "Project on Google Cloud", minutes: 124 },
             { id: "devops-x", name: "Docker", minutes: 128 },
             { id: "devops-y", name: "Containerization", minutes: 128 },
             { id: "devops-z", name: "Kubernetes", minutes: 305 },
