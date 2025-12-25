@@ -15,21 +15,40 @@
 </header>
 
 <main>
+
   <div class="toolbar">
     <button id="exportCsv">Export CSV</button>
   </div>
 
   <div class="card">
-    <h2>Topic-wise Progress</h2>
-    <canvas id="barChart"></canvas>
+    <h2>Daily Study Trend</h2>
+    <div class="st-chart-container">
+      <canvas id="lineChart"></canvas>
+    </div>
   </div>
 
   <div class="card">
-    <h2>Time Distribution</h2>
-    <canvas id="pieChart"></canvas>
+    <h2>Per Topic Completion</h2>
+    <div id="topicPies" class="topic-grid"></div>
   </div>
+
+  <div class="card">
+    <h2>Overall Completion</h2>
+    <div class="chart-container">
+      <canvas id="topicPieChart"></canvas>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Topic Distribution</h2>
+    <div class="chart-container">
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
 </main>
 
+<!-- SCRIPT ORDER IS CRITICAL -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/data.js"></script>
 <script src="js/storage.js"></script>
